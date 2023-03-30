@@ -8,14 +8,18 @@ const listaSpesa = [
      'succo',
 ]
 
-let indice = 0;
+const lista = document.getElementById('lista-spesa')
 
-let soldatino = true
+let i = 0;
 
-while( soldatino ){
-     document.writeln(listaSpesa)
+while( i < listaSpesa.length ){
+     
+     const item  = listaSpesa[i]
 
-     soldatino = false
+     const listItem = document.createElement('li')
+     listItem.innerText = item
+     lista.append(listItem)
 
+     i++
 }
 
